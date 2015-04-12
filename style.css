@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+}
+
+	@font-face {
+        font-family: "Arial Black";
+        src: url('../fonts/arialblack.eot');
+        src: url('../fonts/arialblack.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/arialblack.svg#Arial Black') format('svg'),
+        url('../fonts/arialblack.woff') format('woff'),
+        url('../fonts/arialblack.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+	}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	background-color: #ccc;
+}
+
+#header {
+	margin: 20px auto;
+	padding:10px;
+	
+}
+
+#header img{
+	  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+	
+	
+#wrapper {
+	width:520px;
+	margin: 20px auto;
+	background-color: #fff;
+	padding: 10px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+
+
+
+
+h2 {
+	font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	color: #1a9397;
+	text-transform:uppercase;
+	letter-spacing: 1px;
+	font-size:30px;
+	
+	
+	
+	}
+	h3 {
+		font-family: "Arial Black", Arial, Helvetica, sans-serif;
+		color: #1a9397;
+		text-transform:uppercase;
+		padding-bottom:5px;
+		font-size: 20px;
+		letter-spacing: 1px;
+	
+	
+	}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height: 20pt;
+	
+}
+
+img {
+	margin-bottom:12px;
+}
+
+
+blockquote {
+	font-size:14px;
+	line-height: 1.5em;
+  background-color: #f9f9f9;
+  border-left: 5px solid #ccc;
+  margin: 1em 5px;
+  margin-left:30px;
+	padding-left: 8px;
+	quotes: '\201C' '\201D'
+	
+
+}
+
+blockquote:before {
+
+content:â€\201Câ€;
+
+}
+
+blockquote:after {
+
+content:â€\201Dâ€;
+
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height:.1em;
+  margin-right:.25em;
+  vertical-align:-.4em;
+}
+
+blockquote:after {
+  color: #ccc;
+  content: close-quote;
+   font-size: 4em;
+line-height:.10em;
+margin-left: 0.35em;
+vertical-align:-.4em
+}
+
+
+blockquote p {
+  display: inline;
+}
+
+
+li {
+	margin-left:30px;
+	padding-left: .20em;
+	line-height: 15pt;
+}
+
+ul {
+	padding:10px;
+	list-style-type: circle;
+	}
+
+ol {
+	padding:10px;
+	
+	
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+
+
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
+
+	footer{
+		background-color:#F4F4F4;
+		height: 40px;
+		line-height:20px;
+		margin: auto;
+		text-decoration:none;
+		margin-bottom: 5px;
+		margin-top:5px;
+	}
+	
+
+
+
+	
+a:hover {
+  color:#000;
+  background-color: #1a9397;
+}
