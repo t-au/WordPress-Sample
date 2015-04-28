@@ -1,3 +1,7 @@
+*{
+margin:0;
+padding:0;
+}
 body {
 background-color:#1a9397;
 font-family: 'Open Sans', sans-serif;
