@@ -1,80 +1,59 @@
 <!DOCTYPE html> 
 <head>
 <html>
- <title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?></title>
- <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="flexslider.css" type="text/css" media="screen" />
+<title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?></title>
+ <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles.css">
+  <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+<!-- End Toggle Menu -->
+<!-- Start WP head -->
+<?php wp_head();?>
+<!-- End WP head -->
 </head>
-<body>
-<div id="navbar"><a href="http://www.tina-au.com"><img src="images/navbar.png" style="width:50px;"></a></div>
-<div id='cssmenu'>
+<body <?php body_class();?>>
+<div id="navbar"><a href="http://tina-au.com/wordpress/"><img src="<?php bloginfo('template_directory'); ?>/images/navbar.png" style="width:50px;"></a></div>
+
+<!--<div id='cssmenu'>
 <ul>
-   <li class='active'><a href='#'>Home</a></li>
-   <li><a href='blog.html'>Blog</a></li>
+   <li><a href='index.html'>Home</a></li>
+   <li class='active'><a href='blog.html'>Blog</a></li>
    <li><a href='resume.html'>Resume</a></li>
    <li><a href='contact.html'>Contact</a>
     <li><a href='credit.html'>Credits</a>
    </li>
 </ul>
-</div>
+</div>-->
+<!-- End Navigation -->
 
-<div id="flexslider">
-<div class="flexslider">
-  <ul class="slides">
-    <li>
-      <img src="images/slider1.jpg" alt="" />
-    </li>
-    <li>
-      <img src="images/slider2.jpg" alt="" />
-    </li>
-    <li>
-      <img src="images/slider3.jpg" alt="" />
-    </li>
-    <li>
-      <img src="images/slider4.jpg" alt="" /></li>
-    </ul></div>
+<!-- Begin new navigation-->
+<?php wp_nav_menu(array('the_location' => 'cssmenu','container_id' => 'cssmenu'));?>
+<!--End New Navigation-->
+
+<div id="contents">
+<?php if ( have_posts() ): while( have_posts() ) : the_post();//start the loop?>
+<h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+<?php the_content();?>
+
+<?php endwhile; endif //end the loop?>
 
 </div>
-<div id="content">
-<div id="information">
-<div class="about">
-<h1>About</h1> 
-<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. </p>
-</div>
-<div class="mission">
-<h1>Mission</h1>
-<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.  Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi.</p>
-</div>
-<div class="offers">
-<h1>Offers</h1>      
-<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</em> Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi.</p>
-</div>
-
+<div id="sidebar">
+	<!--<li><a href=''>Home</a></li>
+   <li><a href='blog.html'>Blog</a></li>
+   <li><a href='resume.html'>Resume</a></li>
+   <li><a href='contact.html'>Contact</a>
+    <li><a href='credit.html'>Credits</a>-->
+    <h2><?php the_title($post->post_parent); ?></h2>
+	<ul>
+    <?php wp_list_pages( array( 'title_li' => '',));?>
+	</ul>
 </div>
 
 
+
+
+<!-- Star WP Footer-->
+  <?php wp_footer();?>
+  <!-- End WP Footer -->
 </html>
-
-<!-- jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
-
-  <!-- FlexSlider -->
-  <script defer src="js/jquery.flexslider.js"></script>
-
-  <script type="text/javascript">
-    $(function(){
-      SyntaxHighlighter.all();
-    });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-  </script>
-</body>
 
