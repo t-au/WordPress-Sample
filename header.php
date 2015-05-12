@@ -13,4 +13,8 @@
 <body <?php body_class();?>>
 <div id="navbar">
  <a href="http://tina-au.com/wordpress/">
-  <img src="<?php bloginfo('template_directory'); ?>/images/navbar.png" style="width:50px;"></a>
+  <img src="<?php bloginfo('template_directory'); ?>/images/navbar.png" style="width:50px;">
+</a>
+<!-- Begin new navigation-->
+<?php wp_nav_menu(array('the_location' => 'cssmenu','container_id' => 'cssmenu'));?>
+<!--End New Navigation-->
