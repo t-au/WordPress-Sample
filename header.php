@@ -3,7 +3,8 @@
 <html>
 <title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?></title>
  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles.css">
-  <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/flexslider.css"  />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
 <!-- End Toggle Menu -->
 <!-- Start WP head -->
