@@ -4,26 +4,27 @@ font-family: 'Open Sans', sans-serif;
 }
 
 
-p{
+#contents p{
 color:#000000;
-text-align:center;
-margin:20px;
+margin: 2px 5px 0 0;
+font-size:14px;
+text-align:left;
 }
 
 h1{
 font-family: 'Open Sans', sans-serif;
 font-weight:800;
 color:#000000;
-text-align:center;
+
 }
 
 #navbar {
- background-color:#fff;
- width:100%;
- height:55px;
- position:absolute;
- top:25px;
- left:0;
+background-color:#fff;
+width:100%;
+height:55px;
+position: fixed;
+top: 0px;
+left: 0px;
 }
 
 @import url(http://fonts.googleapis.com/css?family=Raleway);
@@ -59,7 +60,7 @@ text-align:center;
   line-height: 1;
   position: absolute;
   right:30px;
-  top:28px;
+  top:7px;
 }
 #cssmenu ul {
   background: #ffffff;
@@ -147,9 +148,6 @@ text-align:center;
 	display:none;
 }
 
-
-
-
 #flexslider{
   width:100%;
   position:absolute;
@@ -165,6 +163,36 @@ text-align:center;
         top:680px;
         height:auto;
         left:0;
+}
+
+#contents img{
+  box-sizing:border-box;
+ 
+}
+
+#contents img.wp-post-image{}
+
+#contents img.attachment-thumbnail {
+  float:left;
+  margin: 10px 10px 10px 10px;
+}
+  
+}
+
+#contents img.attachment-medium
+{}
+#contents img.attachment-large
+{}
+ #contents img.attachment-full
+{}
+
+
+#contents article.post-excerpt{
+  overflow: hidden;
+  margin-bottom:10px;
+  border-bottom:1px solid #ddd;
+  padding-bottom:10px;
+  
 }
 
 #information {
@@ -194,7 +222,6 @@ text-align:center;
 #contents {
         
         width:800px;
-        border:1px solid #000;
         margin:50px -600px;
         left: 50%;
         position:absolute;
@@ -202,9 +229,9 @@ text-align:center;
 }
 
 #sidebar {
-   
+	height:100%;
         width:330px;
-        border:1px solid #000;
+       
         margin:50px 200px;
         left:50%;
         position:absolute;
@@ -218,19 +245,27 @@ li {
 
 img{
 	margin:10px;
+
 }
 h2{
 	margin:10px;
+	margin-bottom:2px;
 }
+
 h3 {
 	margin:10px;
+margin-bottom:2px;
 }
 
 blockquote{
 	margin:20px;
 }
-p{
-	margin:20px;
+
+
+small{
+	margin-bottom:2px;
+	font-size:12px;
+	
 }
 
 ul{
@@ -243,15 +278,17 @@ h1{
 	
 }
 
-footer{
-background-color:#fff;
+#footer{
+background-color: (255,255,255, 0.9); 
 width: 100%;
-height: auto;
-position: absolute;
+height: 50px;
+position: fixed;
 bottom: 0px;
 left: 0px;
-
 }
+
+
+
 
 /* =WordPress Core
 -------------------------------------------------------------- */
@@ -359,5 +396,7 @@ a img.aligncenter {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
+
+
 
 
