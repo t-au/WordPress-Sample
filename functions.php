@@ -22,4 +22,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
   ));
 //
 
+// enabled featured images & post thumbnails
+add_theme_support('post-thumbnails');
+//
+
+
 ?>
