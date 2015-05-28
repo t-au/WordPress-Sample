@@ -20,6 +20,7 @@ wp_list_pages(array('child_of' => $post->post_parent, 'title_li' => __('')));
     <ul><?php wp_list_categories(array('title_li' => __('')));  ?></ul>
          <?php endif; ?>
 
+    
     <?php if(get_post_meta($post->ID , 'Quote' , true)): ?>
     
      <blockquote><?php echo get_post_meta($post->ID , 'Quote' , true);?> <blockquote>
