@@ -1,11 +1,5 @@
 </div>
-
 <div id="sidebar">
- 
-
-
-    
-    
     <?php if (is_page()) : ?>
     <h2 class="sub-navigation-title">
     <?php echo get_the_title($post->post_parent);?></h2>
