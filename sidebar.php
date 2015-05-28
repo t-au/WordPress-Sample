@@ -1,5 +1,7 @@
 </div>
+
 <div id="sidebar">
+
     <?php if (is_page()) : ?>
     <h2 class="sub-navigation-title">
     <?php echo get_the_title($post->post_parent);?></h2>
@@ -23,4 +25,8 @@ wp_list_pages(array('child_of' => $post->post_parent, 'title_li' => __('')));
      <blockquote><?php echo get_post_meta($post->ID , 'Quote' , true);?> <blockquote>
          <?php endif; ?>
     
-    
+    <!--end quotes -->
+         
+<!-- dynamic sidebar begins -->
+         <?php dynamic_sidebar(1);?>
+         <!-- end dynamic-->
