@@ -41,6 +41,8 @@ add_post_type_support('page', 'excerpt');
 
 global $post;
 
+function get_my_title_tag() {
+	
 if (is_front_page ()) {
 	
 	bloginfo('description');
@@ -55,8 +57,13 @@ else {
 	bloginfo('description');
 }
 
-//geting tags//
-function get_my_title_tag() {
+
+if($post->post_parent) {
+	echo '|';
+	echo get_the_title($post->post_parent);
+}
+
+
 	echo ' | ';
 	bloginfo('name'); 
 	echo ' | ';
