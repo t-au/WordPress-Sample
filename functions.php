@@ -35,5 +35,34 @@ register_sidebar(array(
 add_theme_support('post-thumbnails');
 //
 
+//get my excerpts//
+add_post_type_support('page', 'excerpt');
+//ends it//
+
+global $post;
+
+if (is_front_page ()) {
+	
+	bloginfo('description');
+	
+}
+
+else if ( is_page() | is_single()) {
+	the_title();
+}
+
+else {
+	bloginfo('description');
+}
+
+//geting tags//
+function get_my_title_tag() {
+	echo ' | ';
+	bloginfo('name'); 
+	echo ' | ';
+	echo 'Seattle, WA';
+
+}
+//doneee//	
 
 ?>
