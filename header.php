@@ -1,7 +1,10 @@
 <!DOCTYPE html> 
 <head>
 <html>
-<title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?></title>
+
+<title><?php get_my_title_tag();?></title>
+
+<meta name="description" content="<?php echo get_the_excerpt();?>"/>
  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/styles.css">
  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style.css">
   <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/flexslider.css"  />
